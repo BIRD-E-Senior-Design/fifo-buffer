@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "multicore.h": "c",
+        "mutex.h": "c",
+        "types.h": "c",
+        "sio.h": "c",
+        "fifo.h": "c",
+        "spi.h": "c",
+        "stdarg.h": "c",
+        "stdio.h": "c"
+    }
+}
