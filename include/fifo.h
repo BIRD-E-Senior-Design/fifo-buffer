@@ -5,22 +5,23 @@
 #include "pico/mutex.h"
 
 #define BUFSIZE 64 
+#define FIFO_ERROR 5000
 
 typedef struct {
     size_t buffer[BUFSIZE];
+    int count; 
     int head; 
     int tail; 
-    int count; 
     mutex_t mx; 
 } fifo_t; 
 
 /*!
-* \brief Pop the oldest value in the buffer
+* \brief Pop the oldest value (from the head)
 */
 size_t fifo_pop(fifo_t* buffer); 
 
 /*!
-* \brief Push a new value into the buffer
+* \brief Push a new value into the buffer through the tail
 * \param val: obtained sensor value 
 */
 void fifo_push(fifo_t* buffer, size_t val); 
